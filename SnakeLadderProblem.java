@@ -18,12 +18,17 @@ public class SnakeLadderProblem {
             if (a == 1) {
                 singlePlayer += die;
                 System.out.println("Gets a Ladder & Player Moves ahead By Number Of Position :" + singlePlayer);
-                System.out.println("Player Current Posotion :" + singlePlayer);
+
+                if (singlePlayer > 100) {
+                    singlePlayer = 100;
+                    System.out.println("Player Current Posotion :" + singlePlayer);
+                }
             } else if (a == 2) {
                 singlePlayer -= die;
+                System.out.println("Bites By Snake & Player Moves Behind By Number Of Position :" + singlePlayer);
+
                 if ( singlePlayer < 0) {
                     singlePlayer = 0;
-                    System.out.println("Bites By Snake & Player Moves Behind By Number Of Position :" + singlePlayer);
                     System.out.println("Player Current Posotion :" + singlePlayer);
                 }
             } else {
